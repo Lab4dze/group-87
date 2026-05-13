@@ -1,36 +1,44 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-*{
+
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-family: "Space Mono", monospace;
 }
-body{
+
+body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+        min-height: 100vh; 
     background-color: #141c2f;
     flex-direction: column;
+    padding: 20px; 
 }
-.cont{
+
+.cont {
     color: white;
     display: flex;
     flex-direction: column;
     gap: 15px;
-    width: 50%;
+    width: 100%;
+    max-width: 730px; 
     justify-content: center;
     align-items: center;
 }
-.al{
+
+.al {
     display: flex;
-    width: 500px;
+    width: 100%; 
     justify-content: space-between;
 }
-h1{
+
+h1 {
     font-size: 20px;
 }
-#bgColor{
+
+#bgColor {
     background-color: #141c2f;
     color: white;
     border: none;
@@ -39,84 +47,93 @@ h1{
     align-items: center;
     gap: 10px;
 }
-form{
-    width: 600px;
+
+form {
+    width: 100%; 
     background-color: #202947;
-    height: 5%;
     border-radius: 15px;
     height: 50px;
-    
-    
     display: flex;
     align-items: center;
     padding: 10px;
     gap: 10px;
 }
-label{
+
+label {
     margin-top: 8px;
     cursor: pointer;
 }
 
-input{
+input {
     background-color: #202947;
     border: none;
-    width: 80%;
+    flex-grow: 1; 
     height: 100%;
     color: white;
+    outline: none;
 }
-button{
+
+button {
     cursor: pointer;
 }
-#submit{
+
+#submit {
     background-color: #2372f9;
     border: none;
     color: white;
-    padding: 8px;
+    padding: 8px 15px;
     border-radius: 8px;
 }
-#res{
+
+#res {
     padding: 30px;
     background-color: #202947;
     border-radius: 20px;
-    width: 600px;
+    width: 100%; 
 }
-.userDiv{
+
+.userDiv {
     background-color: #202947;
     border-radius: 15px;
     display: flex;
     gap: 30px;
-    height: 320px;
+    min-height: 320px; 
+    height: auto;
 }
-.userPfp{
+
+.userPfp {
     width: 100px;
     height: 100px;
     border-radius: 50%;
 }
-.mid{
+
+.mid {
     display: flex;
     justify-content: space-between;
     font-size: 15px;
     align-items: center;
-
 }
-.mid h3{
+
+.mid h3 {
     color: rgb(182, 182, 182);
     font-size: 16px;
 }
 
-.txts{
+.txts {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    
     justify-content: left;
+    width: 100%; 
 }
-.login{
-    color:#2372f9;
+
+.login {
+    color: #2372f9;
     font-size: 16px;
 }
-.darkdiv{
-    width: 400px;
+
+.darkdiv {
+    width: 100%; 
     height: 100px;
     background-color: #141c2f;
     display: flex;
@@ -125,33 +142,79 @@ button{
     padding: 20px;
     border-radius: 12px;
 }
-.round{
+
+.round {
     display: flex;
     flex-direction: column;
 }
+
 .round p {
     color: gray;
     font-size: 13px;
 }
-.round h3{
-    color: white; 
+
+.round h3 {
+    color: white;
 }
-.b{
+
+.b {
     display: flex;
-    gap: 100px;
+    gap: 20px; 
+    flex-wrap: wrap; 
     align-items: center;
-    
 }
-.b h3{
+
+.b h3 {
     font-weight: 200;
-    font-size: 16[x];
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
-.ac{
+
+.ac {
     display: flex;
     flex-direction: column;
+    gap: 10px;
 }
-.bio{
+
+.bio {
     font-weight: 400;
     font-size: 16px;
     color: rgb(196, 196, 196);
+}
+
+@media (max-width: 600px) {
+    .userDiv {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .mid {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .darkdiv {
+        justify-content: space-around;
+        height: auto;
+        padding: 15px;
+    }
+
+    .b {
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+    }
+    
+    form {
+        gap: 5px;
+        padding: 5px 10px;
+    }
+
+    input {
+        font-size: 13px;
+    }
 }
